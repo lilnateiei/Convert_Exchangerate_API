@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Converter Currency Rate</title>
+</head> 
+<body class="bg-slate-50 text-gray-800 dark:bg-slate-900 dark:text-gray-200 min-h-screen flex items-center justify-center shadow-lg shadow-blue-500/50   ">
+    <div class="bg-indigo-900 p-8 pb-18  w-full max-w-md py-12 flex flex-col  justify-start  rounded-md">
+      <!-- flex col ใช้กำหนดให้ items เป็นแนวตั้ง -->
+      <div><h1 class="text-center font-bold text-2xl mb-4">Converter Currency Rate</h1></div>
+     <div class="mt-0 ml-4">
+        <label class="text-gray-300 font-semibold">Amount:</label>
+     </div>
+      <div class=" mt-2 ml-5">
+          <input type="number" id="Amount" class="bg-gray-100 text-gray-800 text-start w-85 h-11 rounded-md px-2 py-2 font-medium border border-2 border-indigo-500 focus:outline outline-2 outline-indigo-500 " placeholder="Enter your Amount">
+      </div>
+      <div class="flex  ml-4 mt-2  mb-2 gap-70 text-gray font-semibold">
+        <label >Form:</label>
+        <label >To:</label>
+    </div>
+      <div class="ml-5 gap-5 flex mt-0 mb-0">
+           <select name="" id="Currency" class="px-2 w-24 py-2 ml-0 rounded-md bg-gray-200 w-25 text-gray-900 border border-4 border-indigo-500 cursor-pointer">
+            <option value="THB" class="border border-2 border-gray-300 cursor-pointer">THB</option>
+            <option value="USD" class="border border-2 border-gray-300 cursor-pointer">USD</option>
+            <option value="EUR" class="border border-2 border-gray-300 cursor-pointer">EUR</option>
+           </select>
+       
+       
+       
+           <select name="" id="Exchange" class="px-2 py-2 w-24 ml-30 rounded-md bg-gray-200 w-25 text-gray-900 border border-4 border-indigo-500 cursor-pointer">
+            <option value="THB" class="border border-2 border-gray-300">THB</option>
+            <option value="USD" class="border border-2 border-gray-300">USD</option>
+            <option value="EUR" class="border border-2 border-gray-300">EUR</option>
+           </select>
+      </div>
+      <div class="relative bottom-5 mt-15 flex  justify-center items-center align-center">
+        <button class="bg-white px-2 py-2 w-full max-w-xs scale-108 rounded-md h-11 cursor-pointer font-semibold text-indigo-500  hover:text-white hover:bg-indigo-500  transition duration-300
+        hover:scale-115" onclick="ConverterCurrency()">Convert</button>
+      </div>  
+
+      <div class="flex ml-4 mt-0 relative top-5  w-88 px-4 py-2 bg-indigo-400 rounded  ">
+         <div id="result" class="relative text-gray-300 font-semibold  ml-2">12000000</div><span id="curren" class="relative text-gray-300 font-semibold   ml-2"> USD </span>
+      
+      </div>
+      <div>
+        
+      </div>
+      
+      
+    <script src="index.js"></script>
+    <script src="api-key.js"></script>
+    <script src="currency-code.js"></script>
+</body>
+</html>
